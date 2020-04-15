@@ -1,5 +1,5 @@
 var s;
-var scl = 20;
+var scl = 10;
 var food;
 
 
@@ -21,7 +21,7 @@ s.total++;
 }
 
 function draw() {
-  background(0,200,90);
+  background(random());
  
   
 if (s.eat(food)){
@@ -33,7 +33,14 @@ pickLocation();
   
   
   fill(255,0,100);
-  rect (food.x, food.y, scl,scl);
+  ellipse (food.x, food.y, scl,scl);
+  fill(255,0,100);
+  ellipse (food.y, food.y, scl,scl);
+  fill(255,0,100);
+  ellipse (food.y, food.x, scl,scl);
+  fill(255,0,100);
+  ellipse (food.x, food.x, scl,scl);
+  
 }
 
 function keyPressed() {
