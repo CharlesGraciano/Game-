@@ -23,7 +23,7 @@ function Snake() {
   }
   
   this.death = function(){
-    for (var i = 0; i < this.tail.length -1; i++){
+    for (var i = 0; i < this.tail.length; i++){
     var pos = this.tail[i];
       var d = dist(this.x, this.y, pos.x, pos.y);
       if (d <1) {
@@ -54,12 +54,12 @@ function Snake() {
 
   this.show = function() {
     fill(255);
-    for (var i = 0; i < this.tail.length -1; i++){
-    rect(this.tail[i].x, this.tail[i].y, scl, scl);
+    for (var i = 0; i < this.tail.length; i++){
+    ellipse(this.tail[i].x, this.tail[i].y, scl, scl);
   
     }
     fill(255);
-    rect(this.x, this.y, scl, scl);
+    ellipse(this.x, this.y, scl, scl);
   
 
   }
